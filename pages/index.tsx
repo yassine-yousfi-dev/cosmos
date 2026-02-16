@@ -26,7 +26,6 @@ const PROJECTS: Project[] = [
     heading: "Cross-Asset Pricing API and IDE",
     text: "Building and maintaining a cross-asset pricing API and a pricing IDE in an R&D market engineering environment.",
     tools: "Java, C#, REST API, Financial Engineering",
-    link: "https://www.linkedin.com/in/yassine-yousfi-568801ab/",
   },
   {
     id: 2,
@@ -34,15 +33,13 @@ const PROJECTS: Project[] = [
     heading: "Zero Coupon Bond Pricing Microservice",
     text: "Designed and shipped a zero coupon bond pricing microservice in Python, orchestrated in Kubernetes and monitored with Elastic Stack.",
     tools: "Python, Flask, Kubernetes, CI/CD, Elastic Stack",
-    link: "https://www.linkedin.com/in/yassine-yousfi-568801ab/",
   },
   {
     id: 3,
     image: "/images/pricework.svg",
-    heading: "PriceWork (Upwork)",
+    heading: "Upwork",
     text: "Created a salary comparison web app with geolocation autocomplete and protected API access control.",
     tools: "React, Node.js, Firebase, GeoDB API",
-    link: "https://www.upwork.com/",
   },
   {
     id: 4,
@@ -50,7 +47,6 @@ const PROJECTS: Project[] = [
     heading: "Alecol EdTech POC",
     text: "Built interactive learning experiences including MCQ, drag-and-drop, and sentence exercises with scalable patterns.",
     tools: "React, Node.js, Atomic Design, Strategy Pattern",
-    link: "https://www.linkedin.com/company/alecol/",
   },
 ];
 
@@ -170,13 +166,18 @@ export default function HomePage() {
 
       setStatus({
         type: "success",
-        message: result.message === "success" ? "Message sent. I will reply soon." : result.message,
+        message:
+          result.message === "success"
+            ? "Message sent. I will reply soon."
+            : result.message,
       });
       setFormData(INITIAL_FORM);
     } catch (error: any) {
       setStatus({
         type: "error",
-        message: error?.message || "Message could not be sent now. Please email me directly.",
+        message:
+          error?.message ||
+          "Message could not be sent now. Please email me directly.",
       });
     }
   };
@@ -224,8 +225,10 @@ export default function HomePage() {
                 <h1>Yassine Yousfi</h1>
                 <h2>Full Stack Software Engineer At SG ATS.</h2>
                 <p>
-                  Currently at Societe Generale ATS, I design and maintain pricing platforms for financial
-                  products, translating market complexity into fast, reliable tools through full-stack engineering.
+                  Currently at Societe Generale ATS, I design and maintain
+                  pricing platforms for financial products, translating market
+                  complexity into fast, reliable tools through full-stack
+                  engineering.
                 </p>
                 <div className="hero-actions">
                   <a href="#projects" className="btn btn-primary">
@@ -238,13 +241,21 @@ export default function HomePage() {
               </div>
 
               <figure className="hero-photo-wrap">
-                <img src="/images/photo-yassine.jfif" alt="Yassine Yousfi portrait" className="hero-photo" />
+                <img
+                  src="/images/photo-yassine.jfif"
+                  alt="Yassine Yousfi portrait"
+                  className="hero-photo"
+                />
                 <span className="duotone-wash" aria-hidden="true" />
               </figure>
             </section>
           </div>
 
-          <a href="#projects" className="scroll-link" aria-label="Scroll to projects">
+          <a
+            href="#projects"
+            className="scroll-link"
+            aria-label="Scroll to projects"
+          >
             <span className="scroll-down" aria-hidden="true">
               Scroll
             </span>
@@ -255,25 +266,35 @@ export default function HomePage() {
           <section className="section projects" id="projects">
             <div className="section-head">
               <p className="eyebrow">Experience Highlights</p>
-              <h3>Recent delivery across SG ATS, Upwork, and product-focused freelance work.</h3>
+              <h3>
+                Recent delivery across SG ATS, Upwork, and product-focused
+                freelance work.
+              </h3>
             </div>
             <div className="projects-grid">
               {PROJECTS.map((project) => (
                 <article className="project-card" key={project.id}>
-                  <img src={project.image} alt={`${project.heading} preview`} loading="lazy" decoding="async" />
+                  <img
+                    src={project.image}
+                    alt={`${project.heading} preview`}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="project-copy">
                     <h4>{project.heading}</h4>
                     <p>{project.text}</p>
                     <p className="tools">{project.tools}</p>
                     <div className="project-actions">
                       {project.source ? (
-                        <a className="btn btn-ghost" href={project.source} target="_blank" rel="noopener noreferrer">
+                        <a
+                          className="btn btn-ghost"
+                          href={project.source}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           Source
                         </a>
                       ) : null}
-                      <a className="btn btn-primary" href={project.link} target="_blank" rel="noopener noreferrer">
-                        Visit
-                      </a>
                     </div>
                   </div>
                 </article>
@@ -288,17 +309,19 @@ export default function HomePage() {
             </div>
             <div className="about-grid">
               <p>
-                I am Yassine Yousfi, a full stack developer focused on creating reliable web products from idea to
-                production. I enjoy shaping both the user experience and the system underneath it.
+                I am Yassine Yousfi, a full stack developer focused on creating
+                reliable web products from idea to production. I enjoy shaping
+                both the user experience and the system underneath it.
               </p>
               <p>
-                My work blends frontend detail, backend logic, and clean deployment workflows so teams can ship
-                faster without compromising quality.
+                My work blends frontend detail, backend logic, and clean
+                deployment workflows so teams can ship faster without
+                compromising quality.
               </p>
             </div>
             <div className="about-stats">
               <div>
-                <strong>3+</strong>
+                <strong>5+</strong>
                 <span>Years Building</span>
               </div>
               <div>
@@ -324,8 +347,15 @@ export default function HomePage() {
                     <h4>{skill.text}</h4>
                     <span>{skill.percent}%</span>
                   </div>
-                  <div className="skill-track" role="img" aria-label={`${skill.text} proficiency ${skill.percent} percent`}>
-                    <div className="skill-fill" style={{ width: `${skill.percent}%` }} />
+                  <div
+                    className="skill-track"
+                    role="img"
+                    aria-label={`${skill.text} proficiency ${skill.percent} percent`}
+                  >
+                    <div
+                      className="skill-fill"
+                      style={{ width: `${skill.percent}%` }}
+                    />
                   </div>
                 </article>
               ))}
@@ -340,7 +370,11 @@ export default function HomePage() {
               <p>Available for freelance work and product collaborations.</p>
               <div className="footer-links">
                 <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-                <a href="https://github.com/yasTheDreamer/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/yasTheDreamer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   GitHub
                 </a>
                 <a
@@ -360,7 +394,12 @@ export default function HomePage() {
                 name="name"
                 type="text"
                 value={formData.name}
-                onChange={(event) => setFormData((current) => ({ ...current, name: event.target.value }))}
+                onChange={(event) =>
+                  setFormData((current) => ({
+                    ...current,
+                    name: event.target.value,
+                  }))
+                }
                 required
               />
 
@@ -370,7 +409,12 @@ export default function HomePage() {
                 name="email"
                 type="email"
                 value={formData.email}
-                onChange={(event) => setFormData((current) => ({ ...current, email: event.target.value }))}
+                onChange={(event) =>
+                  setFormData((current) => ({
+                    ...current,
+                    email: event.target.value,
+                  }))
+                }
                 required
               />
 
@@ -380,11 +424,20 @@ export default function HomePage() {
                 name="message"
                 rows={4}
                 value={formData.message}
-                onChange={(event) => setFormData((current) => ({ ...current, message: event.target.value }))}
+                onChange={(event) =>
+                  setFormData((current) => ({
+                    ...current,
+                    message: event.target.value,
+                  }))
+                }
                 required
               />
 
-              <button className="btn btn-primary contact-submit" type="submit" disabled={status.type === "loading"}>
+              <button
+                className="btn btn-primary contact-submit"
+                type="submit"
+                disabled={status.type === "loading"}
+              >
                 {status.type === "loading" ? "Sending..." : "Send Message"}
               </button>
 
@@ -395,7 +448,9 @@ export default function HomePage() {
               ) : null}
             </form>
           </div>
-          <p className="copyright">(c) {new Date().getFullYear()} Yassine Yousfi</p>
+          <p className="copyright">
+            (c) {new Date().getFullYear()} Yassine Yousfi
+          </p>
         </footer>
       </div>
     </>

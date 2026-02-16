@@ -1,0 +1,17 @@
+
+> dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.123.78:3000
+
+✓ Starting...
+⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.4
+✓ Ready in 1304ms
+⚠ Your project has `@next/font` installed as a dependency, please use the built-in `next/font` instead. The `@next/font` package will be removed in Next.js 14. You can migrate by running `npx --yes @next/codemod@latest built-in-next-font .`. Read more: https://nextjs.org/docs/messages/built-in-next-font
+ GET / 200 in 313ms (compile: 261ms, render: 52ms)
+ GET / 200 in 20ms (compile: 7ms, render: 13ms)
+ GET / 200 in 26ms (compile: 7ms, render: 19ms)
+✓ Compiled in 44ms
+✓ Compiled in 24ms
