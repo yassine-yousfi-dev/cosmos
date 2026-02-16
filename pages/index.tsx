@@ -7,7 +7,6 @@ type Project = {
   heading: string;
   text: string;
   tools: string;
-  link: string;
   source?: string;
 };
 
